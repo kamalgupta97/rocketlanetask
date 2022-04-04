@@ -1,14 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { PusherProvider } from "@harelpls/use-pusher";
+const config = {
+  // required config props
+  clientKey: "7f23f5e83ed98dd456fe",
+  cluster: "ap2",
 
+  // optional if you'd like to trigger events. BYO endpoint.
+  // see "Trigger Server" below for more info
+  triggerEndpoint: "/pusher/trigger",
+
+  // required for private/presence channels
+  // also sends auth headers to trigger endpoint
+  authEndpoint: "/pusher/auth",
+  auth: {
+    headers: { Authorization: "Bearer token" },
+  },
+};
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PusherProvider {...config}>
+      <App />
+    </PusherProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
