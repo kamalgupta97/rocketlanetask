@@ -47,3 +47,40 @@ export const TaskList = styled.div`
   height: 64px;
   border-top: 1px solid #cecece;
 `;
+
+export const Taskcont = styled.div`
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const Taskcontenttop = styled.div`
+  line-height: 0;
+  & > div > p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #161616;
+    font-style: normal;
+  }
+`;
+export const Taskcontentbottom = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 3px;
+  & > span {
+    font-size: 12px;
+    color: #4c4c4c;
+  }
+`;
+
+export const DeleteButton = styled.div`
+  & > img {
+    cursor: pointer;
+  }
+`;
+
+export const TaskLeft = styled.div``;
+
+export const TaskRight = styled.div``;

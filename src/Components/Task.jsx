@@ -26,25 +26,16 @@ import {
     Loader,
     TaskLists,
 } from "../styled-components/ListSection";
-export default function ({ channel }) {
-    const dispatch = useDispatch();
-
-    useEvent(channel, "kamal-event", (task) => {
-        dispatch(updateTaskbyPusher(task));
-    });
-
-    useEffect(() => {
-        dispatch(gettaskData());
-    }, []);
-
-    const allTasks = useSelector((state) => state.tasks);
-    const isLoading = useSelector((state) => state.isLoading);
-    console.log(allTasks);
-    const userId = useSelector((state) => state.userId);
-
+export default function Task({ channel }) {
     const [projectName, setProjectName] = React.useState("");
     const [taskName, setTaskName] = React.useState("");
     const [isBillable, setIsBillable] = React.useState(false);
+    const allTasks = useSelector((state) => state.tasks);
+    const isLoading = useSelector((state) => state.isLoading);
+    const userId = useSelector((state) => state.userId);
+    const dispatch = useDispatch();
+
+
 
     const handleSubmit = () => {
         let payLoad = {
@@ -61,6 +52,13 @@ export default function ({ channel }) {
         setTaskName("");
         setIsBillable(false);
     };
+    useEvent(channel, "kamal-event", (task) => {
+        dispatch(updateTaskbyPusher(task));
+    });
+
+    useEffect(() => {
+        dispatch(gettaskData());
+    }, [dispatch]);
 
     return (
         <FormContainer>
@@ -71,8 +69,10 @@ export default function ({ channel }) {
             <InputSection>
                 <InputContainer>
                     <BlockContainer>
-                        <Label for="">Project Name</Label>
+                        <Label htmlFor="project">Project Name</Label>
                         <InputBox
+                            name="project"
+                            required
                             value={projectName}
                             onChange={(e) => setProjectName(e.target.value)}
                             primary
@@ -83,8 +83,10 @@ export default function ({ channel }) {
 
                 <InputContainer>
                     <LeftInput>
-                        <Label for="">Task Name</Label>
+                        <Label htmlFor="task">Task Name</Label>
                         <InputBox
+                            name="task"
+                            required
                             value={taskName}
                             onChange={(e) => setTaskName(e.target.value)}
                             placeholder="Eg. Kick-off call"
@@ -124,7 +126,7 @@ export default function ({ channel }) {
                     <Button
                         onClick={handleSubmit}
                         primary
-                        disabled={projectName == "" || taskName == ""}
+                        disabled={projectName === "" || taskName === ""}
                     >
                         Add Activity
                     </Button>

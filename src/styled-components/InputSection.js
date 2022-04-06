@@ -10,7 +10,12 @@ export const InputSection = styled.div`
 
 export const InputBox = styled.input`
   ::placeholder {
-    color: #cecece;
+    color: #161616;
+    font-size: 14px;
+    padding-left: 10px;
+    font-weight: 400;
+    line-height: 18px;
+    opacity: 0.4;
   }
   border: none;
   background: #f4f4f4;

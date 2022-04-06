@@ -17,6 +17,10 @@ input:focus {
   transform: scaleY(1.1);
 }
 
+input {
+  cursor: text;
+}
+
 button {
   cursor: pointer;
 }
@@ -28,6 +32,7 @@ button:hover {
 input[type="checkbox"] {
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 
 label {

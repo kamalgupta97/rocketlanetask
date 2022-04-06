@@ -24,7 +24,7 @@ export const Button = styled.button`
       ? "#8D8D8D"
       : props.primary
       ? "white"
-      : "#000000"};
+      : "#161616"};
   font-size: 1em;
   margin: 1em 0;
   padding: 0.25em 1em;
