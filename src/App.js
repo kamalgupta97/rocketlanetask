@@ -3,7 +3,7 @@ import React from "react";
 import { useChannel } from "@harelpls/use-pusher";
 
 import Task from "./Components/Task";
-import { Loader } from "./styled-components/styled";
+import { Loader } from "./styled-components";
 
 function App() {
   const channel = useChannel("kamal-channel");

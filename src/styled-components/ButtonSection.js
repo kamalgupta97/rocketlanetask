@@ -1,4 +1,16 @@
 import styled from "styled-components";
+export const ButtonSection = styled.div`
+  width: 100%;
+  height: 72px;
+  border-top: 1px solid #cecece;
+`;
+
+export const ButtonContainer = styled.div`
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 10%;
+`;
 
 export const Button = styled.button`
   background: ${(props) =>
@@ -24,25 +36,14 @@ export const Button = styled.button`
       : "2px solid #C6C6C6"};
 
   border-radius: 3px;
-  width: 50%;
+  width: 45%;
   height: 40px;
 `;
 
-export const Loader = styled.div`
-  position: sticky;
-  border: 5px solid #f3f3f3 !important;
-  border-radius: 50% !important;
-  border-top: 5px solid #0f62fe !important;
-  width: 50px !important;
-  height: 50px !important;
-  animation: spin 2s linear infinite;
-  margin: 150px !important;
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+export const CheckBox = styled.div`
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  color: black;
+  border: 2px solid red;
 `;

@@ -27,44 +27,7 @@ button:hover {
   transform: scaleY(1.1);
 }
 
-.halfwidth > input,
-.fullwidth > input {
-  border: none;
-  background: #f4f4f4;
-  height: 40px;
-  border-bottom: 2px solid #8d8d8d;
-  border-radius: 2px;
-  font-size: 14px;
-  padding-left: 10px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0.16%;
-}
-
-.fullwidth {
-  margin: auto;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-}
-.halfwidth {
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-}
-
-.fullwidth > label::before,
-.halfwidth > label::before {
-  content: "*";
-  color: red;
-}
-
-.fullwidth > label,
-.halfwidth > label {
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.32%;
-  font-weight: 400;
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
 }
