@@ -1,15 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
+import "./styles/App.css";
 import React from "react";
 import { useChannel } from "@harelpls/use-pusher";
-import Test from "./Components/Test";
+
+import Task from "./Components/Task";
+import { Loader } from "./styled-components/styled";
 
 function App() {
   const channel = useChannel("kamal-channel");
 
   return (
-    <div>
-      <Test channel={channel} />
+    <div className="App">
+      <Task channel={channel} />
     </div>
   );
 }

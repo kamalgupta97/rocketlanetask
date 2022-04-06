@@ -1,0 +1,28 @@
+.taskcontent {
+  line-height: 0.2;
+  display: flex;
+  flex-direction: column;
+}
+
+.taskcontent > p:nth-child(1) {
+  font-weight: 500;
+}
+.taskcont {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteIcon {
+  cursor: pointer;
+}
+.deleteIcon:hover {
+  fill: #0f62fe;
+}
+.taskcontentsec {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}

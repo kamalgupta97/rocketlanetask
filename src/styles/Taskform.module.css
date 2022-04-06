@@ -1,0 +1,56 @@
+.formContainer {
+  position: relative;
+  top: 128px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.checkboxCont {
+  display: flex;
+}
+.checkboxContent {
+  display: flex;
+  flex-direction: column;
+}
+.checkboxContent > label {
+  line-height: 2;
+}
+.inputBoxCont {
+}
+.buttonsCont {
+  width: 100%;
+  position: relative;
+  margin-top: -30px;
+  bottom: 0;
+  border-top: 1px solid #cecece;
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.buttonsContent {
+  height: 70%;
+  width: 90%;
+  display: flex;
+  margin: auto;
+  gap: 20px;
+}
+.tasklist_Cont {
+  height: 261px;
+  position: relative;
+  /* top: 60px; */
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.tasklist_Cont > div {
+  height: 64px;
+  border-top: 1px solid #cecece;
+}
+
+.taskListHead {
+  height: 20px;
+  width: 90%;
+  margin: auto;
+}
