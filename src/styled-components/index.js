@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   @media only screen and (min-width: 860px) {
     width: 25%;
     height: 720px;
