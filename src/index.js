@@ -3,19 +3,13 @@ import ReactDOM from "react-dom";
 import "./styles/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { PusherProvider } from "@harelpls/use-pusher";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store";
-const config = {
-  clientKey: process.env.REACT_APP_CLIENT_KEY,
-  cluster: "ap2",
-};
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <PusherProvider {...config}>
-        <App />
-      </PusherProvider>
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

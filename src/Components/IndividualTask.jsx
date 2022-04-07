@@ -24,7 +24,7 @@ export default function IndividualTask({
                     </Taskcontenttop>
                     <Taskcontentbottom>
                         {isBillable && (
-                            <img src={dollar} />
+                            <img src={dollar} alt="Dollar Img" />
 
                         )}
                         <span>{projectName}</span>

@@ -52,6 +52,7 @@ export const Taskcont = styled.div`
   display: flex;
   width: 90%;
   margin: auto;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
 `;
@@ -76,11 +77,20 @@ export const Taskcontentbottom = styled.div`
 `;
 
 export const DeleteButton = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
   & > img {
     cursor: pointer;
   }
 `;
 
-export const TaskLeft = styled.div``;
+export const TaskLeft = styled.div`
+  height: 100%;
+`;
 
-export const TaskRight = styled.div``;
+export const TaskRight = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
